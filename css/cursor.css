@@ -1,0 +1,69 @@
+/* =====================================
+   ERYNDOR CUSTOM CURSOR
+===================================== */
+
+/* Oculta el cursor normal */
+html,
+body,
+body * {
+    cursor: none !important;
+}
+
+
+/* CURSOR PERSONALIZADO */
+#custom-cursor {
+    position: fixed;
+
+    width: 90px;
+    height: 90px;
+
+    background-image: url("../img/logo/cursor1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+
+    z-index: 9999999;
+
+    left: 0;
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        width 0.15s ease,
+        height 0.15s ease,
+        background-image 0.1s ease;
+
+    will-change: transform;
+
+    display: none;
+}
+
+
+/* Cuando está sobre algo clickeable */
+#custom-cursor.hover {
+    background-image: url("../img/logo/cursor2.png");
+}
+
+
+/* Ocultarlo cuando el mouse sale de la página */
+#custom-cursor.hidden {
+    opacity: 0;
+}
+
+
+/* En celular/tablet táctil no necesitamos cursor */
+@media (hover: none) and (pointer: coarse) {
+
+    #custom-cursor {
+        display: none !important;
+    }
+
+    html,
+    body,
+    body * {
+        cursor: auto !important;
+    }
+}

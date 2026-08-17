@@ -1,0 +1,776 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Cormorant Garamond",serif;
+color:white;
+background:#06141c;
+}
+
+/*==================================
+NETHRALIS
+==================================*/
+
+body.nethralis{
+background:
+linear-gradient(
+rgba(4, 26, 34, .24),
+rgba(3, 17, 27, .94)
+),url("../img/nethralis/n1.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+body.windward{
+background:
+linear-gradient(
+rgba(4, 26, 34, .24),
+rgba(3, 17, 27, .94)
+),url("../img/windward/w1.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/*==================================
+NAVBAR
+==================================*/
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:1000;
+}
+
+.navbar{
+width:100%;
+max-width:1490px;
+height:90px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+background:rgba(4, 31, 41, .74);
+backdrop-filter:blur(12px);
+border:1px solid rgba(80, 190, 196, .16);
+box-shadow:
+0 12px 35px rgba(0, 0, 0, .30);
+}
+
+/*==================================
+MENU
+==================================*/
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-family:"Cinzel";
+letter-spacing:2px;
+transition:.35s;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:2px;
+background:#43b9b0;
+transition:.35s;
+}
+
+nav a:hover{
+color:#9ff4ef;
+text-shadow:
+0 0 10px rgba(67, 185, 176, .78);
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/*==================================
+HERO
+==================================*/
+
+.nation-hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:9%;
+position:relative;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle,
+rgba(39, 174, 184, .19),
+transparent 70%
+);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+}
+
+.nation-type{
+letter-spacing:4px;
+font-family:"Cinzel";
+color:#71ddd7;
+text-shadow:
+0 0 12px rgba(53, 181, 185, .65);
+}
+
+.hero-content h1{
+font-size:5.5rem;
+margin:20px 0;
+font-family:"Cinzel";
+color:#f0ffff;
+text-shadow:
+0 0 10px rgba(103, 214, 228, .75),
+0 0 30px rgba(24, 138, 151, .58),
+0 0 65px rgba(5, 71, 90, .55);
+}
+
+.hero-content p{
+font-size:1.3rem;
+line-height:2;
+color:#d4eff1;
+}
+
+.hero-button{
+display:inline-block;
+margin-top:40px;
+padding:18px 45px;
+text-decoration:none;
+color:white;
+border:2px solid #43b9b0;
+border-radius:10px;
+background:rgba(8, 75, 82, .30);
+transition:.35s;
+font-family:"Cinzel";
+}
+
+.hero-button:hover{
+background:#0f6f78;
+border-color:#72e6df;
+transform:translateY(-4px);
+box-shadow:
+0 0 18px rgba(67, 185, 176, .72),
+0 0 38px rgba(25, 142, 155, .60);
+}
+
+/*==================================
+SECTIONS
+==================================*/
+
+.section{
+width:88%;
+max-width:1450px;
+margin:auto;
+margin-bottom:40px;
+padding:50px;
+background:rgba(5, 39, 50, .64);
+backdrop-filter:blur(10px);
+border-radius:20px;
+border:1px solid rgba(77, 190, 196, .19);
+box-shadow:
+0 18px 45px rgba(0, 0, 0, .30),
+inset 0 0 30px rgba(67, 185, 176, .025);
+}
+
+.section h2{
+font-family:"Cinzel";
+font-size:3rem;
+margin-bottom:30px;
+color:#a8f1ed;
+text-shadow:
+0 0 12px rgba(49, 169, 177, .35);
+}
+
+.section p{
+line-height:1.4;
+font-size:1.7rem;
+color:#d5e9eb;
+}
+
+/*==================================
+INFO GRID
+==================================*/
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.info-box{
+padding:25px;
+border-radius:15px;
+background:rgba(67, 185, 176, .055);
+border:1px solid rgba(75, 183, 190, .22);
+transition:.35s;
+}
+
+.info-box:hover{
+transform:translateY(-6px);
+border-color:#43b9b0;
+box-shadow:
+0 0 22px rgba(45, 169, 175, .28);
+}
+
+.info-box h3{
+font-family:"Cinzel";
+margin-bottom:10px;
+color:#73d9d4;
+}
+
+/*==================================
+CHARACTERS
+==================================*/
+
+.characters{
+display:flex;
+gap:30px;
+}
+
+.characters h3{
+font-size:31px;
+color:#d6f9f7;
+}
+
+.character-card{
+text-decoration:none;
+color:white;
+text-align:center;
+}
+
+.character-card img{
+width:230px;
+border-radius:18px;
+border:3px solid #35aeb4;
+transition:.35s;
+box-shadow:
+0 0 15px rgba(45, 169, 175, .18);
+}
+
+.character-card img:hover{
+transform:scale(1.05);
+border-color:#78e4df;
+box-shadow:
+0 0 15px #36b7b8,
+0 0 35px rgba(27, 146, 158, .48);
+}
+
+/*==================================
+GALLERY
+==================================*/
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+border-radius:18px;
+border:1px solid rgba(77, 183, 190, .18);
+transition:.35s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+box-shadow:
+0 0 28px rgba(40, 161, 169, .38);
+filter:
+brightness(1.07)
+saturate(1.08);
+}
+
+/*==================================
+OVERVIEW IMAGE
+==================================*/
+
+img{
+width:99%;
+}
+
+/*==================================
+MUSIC BUTTON
+==================================*/
+
+.music-btn{
+position:fixed;
+top:120px;
+left:30px;
+z-index:9999;
+}
+
+.music-btn img:hover{
+transform:scale(1.1);
+filter:
+drop-shadow(0 0 10px #43b9b0)
+drop-shadow(0 0 20px rgba(26, 148, 157, .60));
+}
+
+.music-btn img.playing{
+animation:musicFloat 2.4s ease-in-out infinite;
+}
+
+@keyframes musicFloat{
+
+0%{
+transform:
+translateY(0)
+rotate(-5deg);
+}
+
+50%{
+transform:
+translateY(-4px)
+rotate(5deg);
+}
+
+100%{
+transform:
+translateY(0)
+rotate(-5deg);
+}
+
+}
+
+/*==================================
+FOOTER
+==================================*/
+
+footer{
+text-align:center;
+padding:35px;
+color:#8cb8ba;
+background:rgba(3, 21, 29, .66);
+border-top:1px solid rgba(77, 183, 190, .12);
+}
+
+
+/* ==========================================================
+   LAPTOPS MEDIANAS
+========================================================== */
+
+@media screen and (max-width: 1200px) {
+
+    .nation-hero {
+        padding-top: 22rem;
+        padding-bottom: 19rem;
+    }
+
+    .section {
+        width: 92%;
+        padding: 42px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .music-btn {
+        top: 105px;
+        left: 20px;
+    }
+
+    .music-btn img {
+        width: 78px;
+    }
+}
+
+
+/* ==========================================================
+   TABLETS HORIZONTALES
+========================================================== */
+
+@media screen and (max-width: 950px) {
+
+
+    .navbar {
+        height: 80px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    nav {
+        gap: 21px;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .nation-hero {
+        padding: 125px 25px 65px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3.4rem, 8vw, 4.7rem);
+    }
+
+    .section {
+        width: 92%;
+        padding: 36px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .characters {
+        justify-content: center;
+    }
+}
+
+
+/* ==========================================================
+   TABLETS VERTICALES
+========================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: 72px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 17px;
+    }
+
+    .logo img {
+        width: 112px;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        gap: 17px;
+    }
+
+    nav a {
+        padding: 0;
+        font-size: 0.67rem;
+        line-height: 1;
+        letter-spacing: 0.55px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    nav a::after {
+        bottom: -7px;
+    }
+
+    .nation-hero {
+        min-height: 100svh;
+
+        padding: 110px 20px 55px;
+    }
+
+    .hero-content {
+        padding: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.9rem, 11vw, 4.1rem);
+        letter-spacing: 3px;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .hero-button {
+        margin-top: 30px;
+        padding: 15px 35px;
+    }
+
+    .section {
+        width: calc(100% - 30px);
+        padding: 30px 25px;
+        border-radius: 16px;
+    }
+
+    .section h2 {
+        margin-bottom: 23px;
+        font-size: 2.2rem;
+    }
+
+    .section p {
+        font-size: 1.35rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .info-box {
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .character-card {
+        flex-basis: 210px;
+        width: 210px;
+    }
+
+    .character-card img {
+        width: 210px;
+        height: 330px;
+    }
+
+    footer {
+        padding: 30px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES
+========================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .nation-hero {
+        min-height: 100svh;
+        padding: 100px 14px 50px;
+    }
+
+    .nation-type {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+        margin: 16px 0;
+        font-size: clamp(2.4rem, 12vw, 3.4rem);
+        line-height: 1.1;
+        letter-spacing: 2px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-button {
+        width: min(100%, 285px);
+        margin-top: 27px;
+        padding: 14px 18px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        width: calc(100% - 20px);
+        margin-bottom: 25px;
+        padding: 24px 17px;
+        border-radius: 14px;
+    }
+
+    .section h2 {
+        margin-bottom: 19px;
+        font-size: 1.9rem;
+        line-height: 1.25;
+    }
+
+    .section p {
+        font-size: 1.34rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .info-box {
+        padding: 19px 16px;
+    }
+
+    .characters {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .character-card {
+        flex-basis: auto;
+        width: min(100%, 250px);
+    }
+
+    .character-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 23 / 36;
+        object-fit: cover;
+    }
+
+    .characters h3 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .gallery img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
+
+    .section > img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    footer {
+        padding: 26px 13px;
+
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES PEQUEÑOS
+========================================================== */
+
+@media screen and (max-width: 430px) {
+
+    .nation-hero {
+        padding: 92px 11px 45px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.15rem, 12vw, 2.9rem);
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .hero-button {
+        width: min(100%, 260px);
+        padding: 13px 15px;
+        font-size: 0.82rem;
+    }
+
+    .section {
+        width: calc(100% - 16px);
+        padding: 21px 14px;
+    }
+
+    .section h2 {
+        font-size: 1.7rem;
+    }
+
+    .section p {
+        font-size: 1.2rem;
+    }
+
+    .info-box {
+        padding: 17px 14px;
+    }
+
+    .character-card {
+        width: min(100%, 225px);
+    }
+}
+
+
+/* ==========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================== */
+
+@media screen and (max-width: 360px) {
+
+    .nation-hero {
+        padding-top: 88px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.05rem;
+    }
+
+    .section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES EN POSICIÓN HORIZONTAL
+========================================================== */
+
+@media screen and (max-height: 520px) and (orientation: landscape) {
+
+    .nation-hero {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        margin: 10px 0;
+        font-size: clamp(2.2rem, 8vw, 3.4rem);
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .hero-button {
+        margin-top: 18px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+}

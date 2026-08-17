@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eryndor | Interactive World Map</title>
+
+<link rel="icon" type="image/png" href="img/elogo.png">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/cursor.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="navbar">
+<div class="logo">
+<img src="img/logo/logo.png">
+</div>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="map.html">WORLD</a>
+<a href="characters.html">CHARACTERS</a>
+</nav>
+
+</div>
+
+</header>
+
+<div class="music-btn">
+
+    <img src="img/logo/lmusic.png" id="musicIcon" alt="Music">
+
+    <audio id="bgMusic" loop>
+        <source src="music/home.mp3" type="audio/mpeg">
+    </audio>
+
+</div>
+
+<main>
+
+<section class="hero">
+
+<div class="map-container">
+
+    <img src="img/mapa.png" id="map">
+
+    <!-- NOMBRES INTERACTIVOS -->
+
+<div class="label frostpeaks-label">FROSTPEAKS</div>
+
+<div class="label leontrex-label">SANCTUARY OF <br> LEONTREX</div>
+
+<div class="label umbrawood-label">UMBRAWOOD</div>
+
+<div class="label gemora-label">GEMORA</div>
+
+<div class="label eliondra-label">ELIONDRA</div>
+
+<div class="label windward-label">WINDWARD <br> ISLES</div>
+
+<div class="label zythar-label">ZYTHAR RUINS</div>
+
+<div class="label velmoris-label">VELMORIS</div>
+
+<div class="label arkhan-label">ARKHAN WASTES</div>
+
+<div class="label nethralis-label">NETHRALIS SEAS</div>
+
+<div class="label void-label">THE SUFFOCATING <br> VOID</div>
+
+    <!-- Frostpeaks -->
+    <a class="region frostpeaks"
+       href="nations/frostpeaks.html">
+    </a>
+
+    <!-- Leontrex -->
+    <a class="region leontrex"
+       href="nations/leontrex.html">
+    </a>
+
+    <!-- Umbrawood -->
+    <a class="region umbrawood"
+       href="nations/umbrawood.html">
+    </a>
+
+    <!-- Gemora -->
+    <a class="region gemora"
+       href="nations/gemora.html">
+    </a>
+
+    <!-- Eliondra -->
+    <a class="region eliondra"
+       href="nations/eliondra.html">
+    </a>
+
+    <!-- Windward -->
+    <a class="region windward"
+       href="nations/windward.html">
+    </a>
+
+    <!-- Zythar -->
+    <a class="region zythar"
+       href="nations/zythar.html">
+    </a>
+
+    <!-- Velmoris -->
+    <a class="region velmoris"
+       href="nations/velmoris.html">
+    </a>
+
+    <!-- Arkhan -->
+    <a class="region arkhan"
+       href="nations/arkhan.html">
+    </a>
+    
+    <!-- Nethralis -->
+    <a class="region nethralis"
+       href="nations/nethralis.html">
+    </a>
+
+    <!-- Void -->
+    <a class="region void"
+       href="nations/void.html">
+    </a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="tooltip">
+
+    <h2 id="tooltip-title"></h2>
+
+    <p id="tooltip-desc"></p>
+
+</div>
+
+<footer>
+    © 2026 Eryndor World Archive
+</footer>
+
+<!-- CUSTOM CURSOR -->
+<div id="custom-cursor"></div>
+
+<script src="js/cursor.js"></script>
+<script src="js/music.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

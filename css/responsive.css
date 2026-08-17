@@ -1,0 +1,399 @@
+/* =========================================================
+   ERYNDOR — NAVBAR.CSS
+   Navbar compartido para todas las páginas
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: initial;
+    background: rgb(15 18 40 / 24%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    width: 210px;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+nav {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    gap: 2.4rem;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
+nav a {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 6px 0;
+    color: white;
+    text-decoration: none;
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1.7px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    transition:
+        color 0.35s ease,
+        text-shadow 0.35s ease;
+}
+
+
+/* Línea inferior del enlace */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    transform: translateX(-50%);
+
+    transition: width 0.35s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   PANTALLAS GRANDES
+========================================================= */
+
+
+
+@media screen and (min-width: 1500px) {
+
+    .navbar {
+        max-width: 1200px;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .logo img {
+        width: 260px;
+    }
+
+    nav {
+        gap: 32px;
+    }
+
+    nav a {
+        font-size: 2rem;
+        letter-spacing: 1.9px;
+    }
+
+    .music-btn{
+        top:22px;
+        left:2px;
+    }
+
+    .music-btn img{
+        width:79px;
+        height:auto;
+        margin-top: 3rem;
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS HORIZONTALES
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .navbar {
+        height: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px;
+        display:flex;
+    justify-content:space-around;
+    align-items:center;
+    }
+
+    .logo img {
+        width: 195px;
+    }
+
+    nav {
+        gap: 41px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        letter-spacing: 0.9px;
+    }
+    
+    .music-btn{
+        top:22px;
+        left:2px;
+    }
+
+    .music-btn img{
+        width:99px;
+        height:auto;
+        margin-top: 5rem;
+    }
+}
+
+
+/* =========================================================
+   TABLETS VERTICALES
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        max-width: none;
+        height: 72px;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        padding-left: 14px;
+        padding-right: 14px;
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        width: 168px;
+    }
+
+    nav {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        width: auto;
+        margin: 0;
+        gap: 22px;
+    }
+
+    nav a {
+        width: auto;
+        padding: 5px 0;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        white-space: nowrap;
+        overflow-wrap: normal;
+    }
+
+    nav a::after {
+        bottom: -4px;
+    }
+
+    .music-btn{
+        top:22px;
+        left:2px;
+    }
+
+    .music-btn img{
+        width:99px;
+        height:auto;
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media screen and (max-width: 430px) {
+
+    .navbar {
+        height: 64px;
+        padding-left: 8px;
+        padding-right: 8px;
+        gap: 9px;
+    }
+
+    .logo img {
+        width: 98px;
+    }
+
+    nav {
+        gap: 11px;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        letter-spacing: 0;
+    }
+
+    .music-btn{
+        top:22px;
+        left:2px;
+    }
+
+    .music-btn img{
+        width:79px;
+        height:auto;
+        margin-top: 3rem;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .navbar {
+        width: 100%;
+        padding-left: 7px;
+        padding-right: 7px;
+        gap: 7px;
+    }
+
+    .logo img {
+        width: 99px;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 0.6rem;
+    }
+
+        .music-btn{
+        top:22px;
+        left:1px;
+    }
+
+    .music-btn img{
+        width:79px;
+        height:auto;
+        margin-top: 3rem;
+    }
+
+}
+
+.hero {
+padding-top: 150px;
+}
+
+/* =========================================================
+   CELULARES EN HORIZONTAL
+========================================================= */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    .navbar {
+        height: 58px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .logo img {
+        width: 82px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 0.58rem;
+    }
+
+    .music-btn{
+        top:22px;
+        left:2px;
+    }
+
+    .music-btn img{
+        width:79px;
+        height:auto;
+        margin-top: 8rem;
+    }
+}
+
+.hero {
+padding-top: 150px;
+}
+
+.eryndor-icon {
+    overflow: hidden;
+}
+
+.eryndor-icon img {
+    width: 99%;
+    height: 99%;
+}

@@ -1,0 +1,704 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Cormorant Garamond",serif;
+color:white;
+background:#091322;
+}
+
+/*==================================
+LEONTREX
+==================================*/
+
+body.leontrex{
+background:
+linear-gradient(rgba(8, 18, 38, 0.158),
+rgba(8,18,38,.90)),
+url("../img/leontrex/l1.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+body.frostpeaks{
+background:
+linear-gradient(rgba(8, 18, 38, 0.158),
+rgba(8,18,38,.90)),
+url("../img/frostpeaks/f1.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.navbar{
+    width:110;
+    max-width:1490px;
+    height:90px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:rgba(15,18,40,.60);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* MENU */
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-family:"Cinzel";
+    letter-spacing:2px;
+    transition:.35s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:#7ea8ff;
+    transition:.35s;
+}
+
+nav a:hover{
+    color:#9dbbff;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/*==================================
+HERO
+==================================*/
+
+.nation-hero{
+position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 4rem;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle,
+rgba(110,170,255,.15),
+transparent 70%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+}
+
+.nation-type{
+letter-spacing:4px;
+font-family:"Cinzel";
+color:#9fd0ff;
+}
+
+.hero-content h1{
+font-size:5.5rem;
+margin:20px 0;
+font-family:"Cinzel";
+text-shadow:
+0 0 25px rgba(120,180,255,.45);
+}
+
+.hero-content p{
+font-size:1.3rem;
+line-height:2;
+color:#d7e7ff;
+}
+
+.hero-button{
+display:inline-block;
+margin-top:40px;
+padding:18px 45px;
+text-decoration:none;
+color:white;
+border:2px solid #78b9ff;
+border-radius:10px;
+transition:.35s;
+font-family:"Cinzel";
+}
+
+.hero-button:hover{
+background:#2d63ff;
+box-shadow:
+0 0 30px rgba(90,140,255,.55);
+}
+
+/*==================================
+SECTIONS
+==================================*/
+
+.section{
+width:88%;
+max-width:1450px;
+margin:auto;
+margin-bottom:40px;
+padding:50px;
+background:rgba(18,28,55,.45);
+backdrop-filter:blur(10px);
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.section h2{
+font-family:"Cinzel";
+font-size:3rem;
+margin-bottom:30px;
+color:#cfe7ff;
+}
+
+.section p{
+line-height:1.4;
+font-size:1.7rem;
+}
+
+/*==================================
+INFO GRID
+==================================*/
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.info-box{
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(120,185,255,.2);
+}
+
+.info-box h3{
+font-family:"Cinzel";
+margin-bottom:10px;
+color:#8fc2ff;
+}
+
+/*==================================
+CHARACTERS
+==================================*/
+
+.characters{
+display:flex;
+gap:30px;
+}
+
+.characters h3{
+font-size: 31px;
+}
+
+.character-card{
+text-decoration:none;
+color:white;
+text-align:center;
+}
+
+.character-card img{
+width:230px;
+border-radius:18px;
+border:3px solid #5f95ff;
+transition:.35s;
+}
+
+.character-card img:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 25px rgba(100,150,255,.45);
+}
+
+/*==================================
+GALLERY
+==================================*/
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+border-radius:18px;
+transition:.35s;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+img {
+width: 99%;
+}
+
+/*==================================
+FOOTER
+==================================*/
+
+footer{
+text-align:center;
+padding:35px;
+color:hsl(212, 71%, 63%);
+background: rgb(15 18 40 / 24%);
+border-top:1px solid rgba(198, 147, 76, .12);
+}
+
+/* ==========================================================
+   LAPTOPS MEDIANAS
+========================================================== */
+
+@media screen and (max-width: 1200px) {
+
+    .nation-hero {
+        padding-top: 22rem;
+        padding-bottom: 19rem;
+    }
+
+    .section {
+        width: 92%;
+        padding: 42px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .music-btn {
+        top: 105px;
+        left: 20px;
+    }
+
+    .music-btn img {
+        width: 78px;
+    }
+}
+
+
+/* ==========================================================
+   TABLETS HORIZONTALES
+========================================================== */
+
+@media screen and (max-width: 950px) {
+
+
+    .navbar {
+        height: 80px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    nav {
+        gap: 21px;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .nation-hero {
+        padding: 125px 25px 65px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3.4rem, 8vw, 4.7rem);
+    }
+
+    .section {
+        width: 92%;
+        padding: 36px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .characters {
+        justify-content: center;
+    }
+}
+
+
+/* ==========================================================
+   TABLETS VERTICALES
+========================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: 72px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 17px;
+    }
+
+    .logo img {
+        width: 112px;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        gap: 17px;
+    }
+
+    nav a {
+        padding: 0;
+        font-size: 0.67rem;
+        line-height: 1;
+        letter-spacing: 0.55px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    nav a::after {
+        bottom: -7px;
+    }
+
+    .nation-hero {
+        min-height: 100svh;
+
+        padding: 110px 20px 55px;
+    }
+
+    .hero-content {
+        padding: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.9rem, 11vw, 4.1rem);
+        letter-spacing: 3px;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .hero-button {
+        margin-top: 30px;
+        padding: 15px 35px;
+    }
+
+    .section {
+        width: calc(100% - 30px);
+        padding: 30px 25px;
+        border-radius: 16px;
+    }
+
+    .section h2 {
+        margin-bottom: 23px;
+        font-size: 2.2rem;
+    }
+
+    .section p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .info-box {
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .character-card {
+        flex-basis: 210px;
+        width: 210px;
+    }
+
+    .character-card img {
+        width: 210px;
+        height: 330px;
+    }
+
+    footer {
+        padding: 30px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES
+========================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .nation-hero {
+        min-height: 100svh;
+        padding: 100px 14px 50px;
+    }
+
+    .nation-type {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+        margin: 16px 0;
+        font-size: clamp(2.4rem, 12vw, 3.4rem);
+        line-height: 1.1;
+        letter-spacing: 2px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-button {
+        width: min(100%, 285px);
+        margin-top: 27px;
+        padding: 14px 18px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        width: calc(100% - 20px);
+        margin-bottom: 25px;
+        padding: 24px 17px;
+        border-radius: 14px;
+    }
+
+    .section h2 {
+        margin-bottom: 19px;
+        font-size: 1.9rem;
+        line-height: 1.25;
+    }
+
+    .section p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .info-box {
+        padding: 19px 16px;
+    }
+
+    .characters {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .character-card {
+        flex-basis: auto;
+        width: min(100%, 250px);
+    }
+
+    .character-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 23 / 36;
+        object-fit: cover;
+    }
+
+    .characters h3 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .gallery img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
+
+    .section > img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    footer {
+        padding: 26px 13px;
+
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES PEQUEÑOS
+========================================================== */
+
+@media screen and (max-width: 430px) {
+
+    .nation-hero {
+        padding: 92px 11px 45px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.15rem, 12vw, 2.9rem);
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .hero-button {
+        width: min(100%, 260px);
+        padding: 13px 15px;
+        font-size: 0.82rem;
+    }
+
+    .section {
+        width: calc(100% - 16px);
+        padding: 21px 14px;
+    }
+
+    .section h2 {
+        font-size: 1.7rem;
+    }
+
+    .section p {
+        font-size: 0.96rem;
+        line-height: 1.7;
+    }
+
+    .info-box {
+        padding: 17px 14px;
+    }
+
+    .character-card {
+        width: min(100%, 225px);
+    }
+}
+
+
+/* ==========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================== */
+
+@media screen and (max-width: 360px) {
+
+    .nation-hero {
+        padding-top: 88px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.05rem;
+    }
+
+    .section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES EN POSICIÓN HORIZONTAL
+========================================================== */
+
+@media screen and (max-height: 520px) and (orientation: landscape) {
+
+    .nation-hero {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        margin: 10px 0;
+        font-size: clamp(2.2rem, 8vw, 3.4rem);
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .hero-button {
+        margin-top: 18px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+}
+
+/* ==========================================================
+   REDUCIR ANIMACIONES CUANDO EL DISPOSITIVO LO SOLICITE
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

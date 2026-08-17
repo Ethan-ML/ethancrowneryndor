@@ -1,0 +1,438 @@
+/* ===========================
+   ERYNDOR - STYLE.CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:rgb(21, 20, 100);
+    font-family:"Cormorant Garamond",serif;
+    overflow-x:hidden;
+}
+
+@font-face{
+    font-family:"GODOFWAR";
+    src:url("../fonts/GODOFWAR.TTF") format("truetype");
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+}
+
+.title-container{
+    position:relative;
+    overflow:hidden;
+}
+
+#title{
+    width: 41rem;
+    align-items: center;
+
+}
+
+/* CONTENEDOR DEL MAPA */
+
+.map-container{
+    position:relative;
+    width:min(1200px,95vw);
+    border:3px solid rgba(212,175,55,.4);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:
+    0 0 40px rgba(212,175,55,.18),
+    0 0 80px rgba(0,0,0,.8);
+}
+
+/* MAPA */
+
+#map{
+    width:100%;
+    display:block;
+    transition:.35s;
+}
+
+/* REGIONES */
+
+.region{
+    position:absolute;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+/* Frostpeaks */
+
+.frostpeaks{
+    left:8%;
+    top:14%;
+    width:19%;
+    height:4%;
+}
+
+/* Leontrex */
+
+.leontrex{
+    left:41%;
+    top:23%;
+    width:21%;
+    height:7%;
+}
+
+/* Umbrawood */
+
+.umbrawood{
+    right:4%;
+    top:14%;
+    width:21%;
+    height:4%;
+}
+
+/* Gemora */
+
+.gemora{
+    right:8%;
+    top:42%;
+    width:14%;
+    height:4%;
+}
+
+/* Eliondra */
+
+.eliondra{
+    left:19%;
+    top:41.4%;
+    width:14%;
+    height:4%;
+}
+
+/* Windward */
+
+.windward{
+    left:4%;
+    top:49.4%;
+    width:18%;
+    height:7%;
+}
+
+/* Zythar */
+
+.zythar{
+    left:42%;
+    top:49.3%;
+    width:22%;
+    height:4%;
+}
+
+/* Velmoris */
+
+.velmoris{
+    left:9%;
+    bottom:24%;
+    width:14%;
+    height:4%;
+}
+
+/* Arkhan */
+
+.arkhan{
+    left: 38%;
+    bottom:19%;
+    width:23%;
+    height:4%;
+}
+
+/* Nethralis */
+
+.nethralis{
+    left:64%;
+    bottom:9.7%;
+    width:24%;
+    height:4%;
+}
+
+/* Void */
+
+.void{
+    right:3%;
+    bottom:28%;
+    width:16%;
+    height:7%;
+}
+
+/* EFECTO HOVER */
+
+.region{
+    position:absolute;
+    cursor:pointer;
+    border-radius:10px;
+    transition:.3s;
+}
+
+/* No mostrar ningún cuadro */
+.region:hover{
+    background:transparent;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:35px;
+    color:#fffefe;
+}
+
+/* =========================================================
+   MAPA RESPONSIVE
+   Las posiciones se mantienen en porcentajes respecto
+   al tamaño real del mapa.
+========================================================= */
+
+/* El contenedor se usa como referencia para el tamaño del texto */
+.map-container{
+    container-type:inline-size;
+}
+
+/* Nombres del mapa */
+.label{
+    position:absolute;
+    z-index:5;
+    font-family:"GODOFWAR", serif;
+
+    /* Respaldo para navegadores antiguos */
+    font-size:clamp(6px, 1.83vw, 22px);
+
+    /* El texto se escala con el ancho del propio mapa */
+    font-size:clamp(6px, 1.83cqw, 22px);
+
+    line-height:1.1;
+    font-weight:bold;
+    white-space:nowrap;
+    pointer-events:none;
+    transition:.35s;
+
+       color: transparent;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 5%,
+            #dce5f4 28%,
+            #7c8aa3 53%,
+            #ffffff 72%,
+            #65728b 100%
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    filter:
+        drop-shadow(0 0.4cqw 0.15cqw rgba(0, 0, 0, 0.9))
+        drop-shadow(0 0 1cqw rgba(7, 7, 7, 0.966));
+}
+
+
+/* =========================================================
+   POSICIONES PROPORCIONALES
+   Calculadas a partir de tu diseño original de 1200 x 1200.
+========================================================= */
+
+.frostpeaks-label{
+    left:9.17%;
+    top:14.58%;
+}
+
+.leontrex-label{
+    left:39.17%;
+    top:26%;
+    width:20%;
+    text-align:center;
+}
+
+.umbrawood-label{
+    right:6.67%;
+    top:15.17%;
+}
+
+.gemora-label{
+    right:9.17%;
+    top:43%;
+    font-size:clamp(7px, 2.17cqw, 26px);
+}
+
+.eliondra-label{
+    left:20.42%;
+    top:42.5%;
+}
+
+.windward-label{
+    left:1.67%;
+    top:52%;
+    width:20%;
+    text-align:center;
+}
+
+.zythar-label{
+    left:42.83%;
+    top:50.5%;
+}
+
+.velmoris-label{
+    left:10%;
+    bottom:24.9%;
+}
+
+.arkhan-label{
+    left:38.83%;
+    bottom:19.8%;
+}
+
+.nethralis-label{
+    right:13%;
+    bottom:10.5%;
+    width:20%;
+    text-align:center;
+}
+
+.void-label{
+    right:4.17%;
+    bottom:30%;
+    width:20%;
+    text-align:center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width:1024px){
+
+    .hero{
+        width:100%;
+        padding:135px 24px 45px;
+    }
+
+    .map-container{
+        width:min(100%, 900px);
+        border-width:2px;
+        border-radius:12px;
+    }
+
+    .region{
+        min-height:12px;
+    }
+
+    footer{
+        padding:28px 18px;
+    }
+    
+    .music-btn{top:182px;left:10px;}
+    .music-btn img{width:149px;height:auto;}
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media screen and (max-width:768px){
+
+    .hero{
+        width:100%;
+        padding:180px 8px 30px;
+        align-items:flex-start;
+    }
+
+    .map-container{
+        width:100%;
+        max-width:100%;
+        border-width:1px;
+        border-radius:8px;
+        box-shadow:
+            0 0 20px rgba(212,175,55,.15),
+            0 0 35px rgba(0,0,0,.65);
+    }
+
+    #map{
+        width:100%;
+        height:auto;
+    }
+
+    /*
+       En celular no se cambian las posiciones.
+       Solo se amplían ligeramente las zonas invisibles
+       para que sea más fácil tocarlas.
+    */
+    .region{
+        border-radius:5px;
+        min-height:10px;
+    }
+
+    .frostpeaks,
+    .umbrawood,
+    .gemora,
+    .eliondra,
+    .zythar,
+    .velmoris,
+    .arkhan,
+    .nethralis{
+        height:5%;
+    }
+
+    .leontrex,
+    .windward,
+    .void{
+        height:8%;
+    }
+
+    /* El tooltip de escritorio puede estorbar al tocar el mapa */
+    #tooltip{
+        display:none !important;
+    }
+
+    footer{
+        padding:22px 12px;
+        font-size:.8rem;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media screen and (max-width:430px){
+
+    .hero{
+        padding:90px 4px 25px;
+    }
+
+    .map-container{
+        border-radius:5px;
+    }
+
+    .label{
+        font-size:clamp(5px, 1.83cqw, 8px);
+    }
+
+    .gemora-label{
+        font-size:clamp(6px, 2.17cqw, 9px);
+    }
+
+    .music-btn{top:82px;left:1px;}
+    .music-btn img{width:79px;height:auto;}
+}

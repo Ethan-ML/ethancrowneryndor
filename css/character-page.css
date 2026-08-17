@@ -1,0 +1,780 @@
+/*==============================
+RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/*==============================
+TEMAS DE COLOR
+==============================*/
+
+/* AZUL */
+body.theme-blue{
+    --accent:#87aaff;
+    --accent-light:#8db2ff;
+    --dark:#203780;
+    --middle:#466dff;
+    --glow:#4f7fff;
+    --glow-rgb:70,109,255;
+    --panel:18,24,45;
+}
+
+/* ROJO */
+body.theme-red{
+    --accent:#ff7373;
+    --accent-light:#ff9999;
+    --dark:#65151a;
+    --middle:#bd2d34;
+    --glow:#ff4048;
+    --glow-rgb:220,50,60;
+    --panel:48,16,20;
+}
+
+/* NARANJA / CAFÉ */
+body.theme-orange{
+    --accent:#e8a36c;
+    --accent-light:#ffc08a;
+    --dark:#663114;
+    --middle:#b76225;
+    --glow:#e27c35;
+    --glow-rgb:205,105,40;
+    --panel:47,27,17;
+}
+
+/* VERDE */
+body.theme-green{
+    --accent:#83d08a;
+    --accent-light:#a4e7a9;
+    --dark:#174e26;
+    --middle:#39894a;
+    --glow:#62c779;
+    --glow-rgb:70,180,90;
+    --panel:15,42,24;
+}
+
+/* MORADO */
+body.theme-purple{
+    --accent:#c083e8;
+    --accent-light:#dcadff;
+    --dark:#40145c;
+    --middle:#852dac;
+    --glow:#b54ae3;
+    --glow-rgb:170,65,220;
+    --panel:38,16,48;
+}
+
+/* CELESTE */
+body.theme-cyan{
+    --accent:#79d8ec;
+    --accent-light:#a7ecf8;
+    --dark:#14566b;
+    --middle:#2fa7c0;
+    --glow:#62d2eb;
+    --glow-rgb:80,190,220;
+    --panel:15,39,49;
+}
+
+/* PLATEADO / GRIS */
+body.theme-silver{
+    --accent:#b9c7df;
+    --accent-light:#dae4f5;
+    --dark:#343d50;
+    --middle:#67758d;
+    --glow:#9caecb;
+    --glow-rgb:150,170,205;
+    --panel:27,31,40;
+}
+
+/* ROSA */
+body.theme-pink{
+    --accent:#e697bd;
+    --accent-light:#ffc0dd;
+    --dark:#681f43;
+    --middle:#b8447a;
+    --glow:#e361a1;
+    --glow-rgb:220,80,150;
+    --panel:50,19,36;
+}
+
+
+/*==============================
+BODY
+==============================*/
+
+body{
+    background:url("../img/leontrex/l1.png") center/cover fixed;
+    color:white;
+    font-family:"Cormorant Garamond", serif;
+
+    /* Tema por defecto */
+    --accent:#87aaff;
+    --accent-light:#8db2ff;
+    --dark:#203780;
+    --middle:#466dff;
+    --glow:#4f7fff;
+    --glow-rgb:70,109,255;
+    --panel:18,24,45;
+}
+
+
+/* Oscurece el fondo */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(5,8,18,.75);
+    z-index:-1;
+}
+
+
+/*==============================
+FONDOS OPCIONALES
+==============================*/
+
+/*
+Puedes usar estas clases junto con el color:
+
+<body class="theme-red bg-gemora">
+
+o
+
+<body class="theme-green bg-eliondra">
+*/
+
+body.bg-azul{
+    background-image:url("../img/fondo3.jpg");
+}
+
+body.bg-rojo{
+    background-image:url("../img/frojo.jpg");
+}
+
+body.bg-verde{
+    background-image:url("../img/fverde.jpg");
+}
+
+body.bg-morado{
+    background-image:url("../img/fmorado.jpg");
+}
+
+body.bg-cafe{
+    background-image:url("../img/fcafe.jpg");
+}
+
+body.bg-negro{
+    background-image:url("../img/fnegro.jpg");
+}
+
+body.bg-rosa{
+    background-image:url("../img/frosa.jpg");
+}
+
+
+/*==============================
+NAVBAR
+==============================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+/*================================
+NAVBAR ROSA
+================================*/
+
+body.nav-pink .navbar{
+    background:rgba(72,18,48,.68);
+
+    border:1px solid rgba(255,160,210,.15);
+
+    box-shadow:
+        0 5px 25px rgba(220,80,150,.10);
+}
+
+
+body.nav-pink nav a::after{
+    background:#e697bd;
+}
+
+
+body.nav-pink nav a:hover{
+    color:#ffc0dd;
+}
+
+
+/*================================
+NAVBAR NEGRO
+================================*/
+
+body.nav-black .navbar{
+    background:rgba(5,5,8,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.35);
+}
+
+
+body.nav-black nav a::after{
+    background:#bfc5d1;
+}
+
+
+body.nav-black nav a:hover{
+    color:#dfe3eb;
+}
+
+/*==============================
+PERSONAJE
+==============================*/
+
+.character{
+    width:90%;
+    max-width:1500px;
+    margin:170px auto 80px;
+
+    display:grid;
+    grid-template-columns:450px 1fr;
+    gap:60px;
+
+    align-items:center;
+}
+
+
+/*==============================
+IMAGEN
+==============================*/
+
+.character-image img{
+    width:98%;
+    border-radius:20px;
+
+    box-shadow:
+        0 0 25px rgba(var(--glow-rgb),.4);
+}
+
+
+/*==============================
+INFORMACIÓN
+==============================*/
+
+.character-info{
+    background:rgba(var(--panel),.65);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+
+    padding:40px;
+}
+
+
+.character-info h1{
+    font-size:4rem;
+    font-family:"Cinzel";
+    margin-bottom:10px;
+}
+
+
+.character-info h3{
+    color:var(--accent-light);
+
+    font-size:1.7rem;
+    font-weight:normal;
+
+    margin-bottom:35px;
+}
+
+
+/*==============================
+TABLA
+==============================*/
+
+table{
+    width:100%;
+    font-size:1.4rem;
+    border-collapse:collapse;
+}
+
+
+td{
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+td:first-child{
+    width:180px;
+
+    color:var(--accent);
+
+    font-family:"Cinzel";
+}
+
+
+/*==============================
+BIOGRAFÍA
+==============================*/
+
+.biography{
+    width:90%;
+    max-width:1500px;
+
+    margin:auto;
+    margin-bottom:120px;
+
+    background:rgba(var(--panel),.60);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:50px;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+
+.biography h2{
+    font-size:2.6rem;
+    font-family:"Cinzel";
+
+    margin-bottom:25px;
+}
+
+
+.biography p{
+    line-height:1.49;
+
+    font-size:1.7rem;
+
+    color:#d9d9d9;
+}
+
+
+/*==============================
+JANITOR BUTTON
+==============================*/
+
+.janitor-button{
+    text-align:center;
+    margin-top:60px;
+}
+
+
+.janitor-button a{
+    display:inline-block;
+
+    padding:18px 50px;
+
+    text-decoration:none;
+
+    font-family:"Cinzel";
+    font-size:1.1rem;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        var(--dark),
+        var(--middle),
+        var(--dark)
+    );
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 20px rgba(var(--glow-rgb),.35);
+}
+
+
+.janitor-button a:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 18px var(--glow),
+        0 0 40px rgba(var(--glow-rgb),.6);
+}
+
+
+/*=========================
+MUSIC BUTTON
+=========================*/
+
+.music-btn{
+    position:fixed;
+
+    top:120px;
+    left:30px;
+
+    z-index:9999;
+}
+
+
+.music-btn img:hover{
+    transform:scale(1.1);
+
+    filter:
+        drop-shadow(
+            0 0 12px var(--accent-light)
+        );
+}
+
+
+/* Animación cuando la música está sonando */
+
+.music-btn img.playing{
+    animation:musicFloat 2s ease-in-out infinite;
+}
+
+/*==================================
+FOOTER ROSA
+==================================*/
+
+body.nav-pink footer{
+    color:#e697bd;
+
+    background:rgba(72,18,48,.24);
+
+    border-top:1px solid rgba(230,151,189,.18);
+}
+
+
+/*==================================
+FOOTER NEGRO
+==================================*/
+
+body.nav-black footer{
+    color:#bfc5d1;
+
+    background:rgba(5,5,8,.55);
+
+    border-top:1px solid rgba(255,255,255,.10);
+}
+
+@keyframes musicFloat{
+
+    0%{
+        transform:rotate(-8deg);
+    }
+
+    50%{
+        transform:rotate(8deg);
+    }
+
+    100%{
+        transform:rotate(-8deg);
+    }
+
+}
+
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media screen and (max-width:1200px){
+
+    .character{
+        width:92%;
+
+        grid-template-columns:
+            minmax(300px, 390px) 1fr;
+
+        gap:40px;
+
+        margin:145px auto 70px;
+    }
+
+
+    .character-info{
+        padding:32px;
+    }
+
+
+    .character-info h1{
+        font-size:3.25rem;
+    }
+
+
+    .biography{
+        width:92%;
+
+        padding:40px;
+
+        margin-bottom:90px;
+    }
+
+}
+
+
+/*==============================
+TABLETS
+==============================*/
+
+@media screen and (max-width:1024px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    .character{
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        margin-top:145px;
+    }
+
+
+    .character-image{
+        text-align:center;
+    }
+
+
+    .character-image img{
+        width:min(100%, 420px);
+    }
+
+
+    .character-info{
+        width:100%;
+    }
+
+
+    .character-info h1{
+        font-size:3rem;
+
+        text-align:center;
+    }
+
+
+    .character-info h3{
+        text-align:center;
+
+        margin-bottom:25px;
+    }
+
+
+    .biography p{
+        font-size:1.2rem;
+
+        line-height:1.5;
+    }
+
+}
+
+
+/*==============================
+CELULARES
+==============================*/
+
+@media screen and (max-width:768px){
+
+    .character{
+        grid-template-columns:1fr;
+
+        width:92%;
+
+        margin-top:111px;
+
+        gap:24px;
+    }
+
+
+    .character-image img{
+        width:min(100%, 340px);
+
+        border-radius:15px;
+    }
+
+
+    .character-info{
+        width:100%;
+
+        padding:24px;
+
+        border-radius:15px;
+    }
+
+
+    .character-info h1{
+        font-size:2.35rem;
+
+        line-height:1.1;
+
+        overflow-wrap:anywhere;
+    }
+
+
+    .character-info h3{
+        font-size:1rem;
+
+        margin-bottom:20px;
+    }
+
+
+    table,
+    tbody,
+    tr,
+    td{
+        display:block;
+
+        width:100%;
+    }
+
+
+    tr{
+        padding:12px 0;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.08);
+    }
+
+
+    td{
+        padding:4px 0;
+
+        border-bottom:0;
+    }
+
+
+    td:first-child{
+        width:100%;
+
+        margin-bottom:3px;
+
+        font-size:.82rem;
+    }
+
+
+    .biography{
+        width:92%;
+
+        padding:28px 24px;
+
+        margin-bottom:70px;
+
+        border-radius:15px;
+    }
+
+
+    .biography h2{
+        font-size:2rem;
+
+        margin-bottom:18px;
+
+        text-align:center;
+    }
+
+
+    .biography p{
+        font-size:1.3rem;
+
+        line-height:1.5;
+    }
+
+
+    .janitor-button{
+        margin-top:40px;
+    }
+
+
+    .janitor-button a{
+        width:100%;
+
+        max-width:340px;
+
+        padding:15px 20px;
+
+        font-size:.95rem;
+
+        text-align:center;
+    }
+
+}
+
+
+/*==============================
+CELULARES PEQUEÑOS
+==============================*/
+
+@media screen and (max-width:430px){
+
+    .character{
+        width:90%;
+
+        margin-top:110px;
+    }
+
+
+    .character-image img{
+        width:min(100%, 300px);
+    }
+
+
+    .character-info{
+        padding:20px 17px;
+    }
+
+
+    .character-info h1{
+        font-size:1.95rem;
+    }
+
+
+    .character-info h3{
+        font-size:.92rem;
+    }
+
+
+    td{
+        font-size:.95rem;
+    }
+
+
+    .biography{
+        width:90%;
+
+        padding:24px 18px;
+    }
+
+
+    .biography h2{
+        font-size:1.65rem;
+    }
+
+
+    .biography p{
+        font-size:1.3rem;
+
+        line-height:1.5;
+    }
+
+
+    .janitor-button a{
+        padding:14px 16px;
+
+        font-size:.87rem;
+    }
+
+}
